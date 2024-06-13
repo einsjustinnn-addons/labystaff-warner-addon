@@ -1,0 +1,22 @@
+{
+  "labystaffwarner": {
+    "settings": {
+      "name": "LabyStaff Warner",
+      "enabled": {
+        "name": "Aktiviert"
+      },
+      "worldNotification": {
+        "name": "Teammitglied beitritt Benachrichtigung"
+      },
+      "nearNotification": {
+        "name": "Teammitglied nähe Benachrichtigung"
+      }
+    },
+    "messages": {
+      "joinWorld": "%s ist in deiner Welt.",
+      "leftWorld": "%s hat die Welt verlassen.",
+      "joinNear": "%s ist in deiner Nähe.",
+      "leftNear": "%s ist nicht mehr in deiner Nähe."
+    }
+  }
+}
