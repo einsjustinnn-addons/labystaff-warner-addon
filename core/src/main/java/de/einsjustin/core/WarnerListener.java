@@ -35,8 +35,9 @@ public class WarnerListener {
       staffInWorld.add(profile);
 
       if (WarnerAddon.INSTANCE.configuration().worldNotification().get()) {
-        Laby.labyAPI().minecraft().sounds().playSound(ResourceLocation.create("minecraft", "block.note.bell"), 1F, 1F);
-
+        if (WarnerAddon.INSTANCE.configuration().soundNotification().get()) {
+          Laby.labyAPI().minecraft().sounds().playSound(ResourceLocation.create("minecraft", "block.note_block.bell"), 1F, 1F);
+        }
         Component component = PREFIX.copy();
         component.append(Component.translatable("labystaffwarner.messages.joinWorld")
             .argument(Component.text(profile.getUsername()))
@@ -51,8 +52,9 @@ public class WarnerListener {
     GameProfile profile = event.playerInfo().profile();
 
     if (staffInWorld.remove(profile) && WarnerAddon.INSTANCE.configuration().worldNotification().get()) {
-      Laby.labyAPI().minecraft().sounds().playSound(ResourceLocation.create("minecraft", "block.note.bell"), 1F, 1F);
-
+      if (WarnerAddon.INSTANCE.configuration().soundNotification().get()) {
+        Laby.labyAPI().minecraft().sounds().playSound(ResourceLocation.create("minecraft", "block.note_block.bell"), 1F, 1F);
+      }
       Component component = PREFIX.copy();
       component.append(Component.translatable("labystaffwarner.messages.leftWorld")
           .argument(Component.text(profile.getUsername()))
@@ -79,8 +81,9 @@ public class WarnerListener {
         currentlyNearStaff.add(profile);
 
         if (staffInNear.add(profile) && WarnerAddon.INSTANCE.configuration().nearNotification().get()) {
-          Laby.labyAPI().minecraft().sounds().playSound(ResourceLocation.create("minecraft", "block.note.bell"), 1F, 1F);
-
+          if (WarnerAddon.INSTANCE.configuration().soundNotification().get()) {
+            Laby.labyAPI().minecraft().sounds().playSound(ResourceLocation.create("minecraft", "block.note_block.bell"), 1F, 1F);
+          }
           Component component = PREFIX.copy();
           component.append(Component.translatable("labystaffwarner.messages.joinNear")
               .argument(Component.text(profile.getUsername()))
@@ -92,9 +95,10 @@ public class WarnerListener {
 
     staffInNear.removeIf(profile -> {
       if (!currentlyNearStaff.contains(profile)) {
+        if (WarnerAddon.INSTANCE.configuration().soundNotification().get()) {
+          Laby.labyAPI().minecraft().sounds().playSound(ResourceLocation.create("minecraft", "block.note_block.bell"), 1F, 1F);
+        }
         if (WarnerAddon.INSTANCE.configuration().nearNotification().get()) {
-          Laby.labyAPI().minecraft().sounds().playSound(ResourceLocation.create("minecraft", "block.note.bell"), 1F, 1F);
-
           Component component = PREFIX.copy();
           component.append(Component.translatable("labystaffwarner.messages.leftNear")
               .argument(Component.text(profile.getUsername()))
