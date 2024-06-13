@@ -10,6 +10,9 @@
       },
       "nearNotification": {
         "name": "Staff Near Notification"
+      },
+      "soundNotification": {
+        "name": "Sound Notification"
       }
     },
     "messages": {

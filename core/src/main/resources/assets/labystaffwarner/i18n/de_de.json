@@ -10,6 +10,9 @@
       },
       "nearNotification": {
         "name": "Teammitglied nähe Benachrichtigung"
+      },
+      "soundNotification": {
+        "name": "Sound Benachrichtigung"
       }
     },
     "messages": {

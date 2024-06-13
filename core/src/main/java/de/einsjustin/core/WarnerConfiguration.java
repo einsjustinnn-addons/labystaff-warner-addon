@@ -17,6 +17,9 @@ public class WarnerConfiguration extends AddonConfig {
   @SwitchSetting
   private final ConfigProperty<Boolean> nearNotification = new ConfigProperty<>(true);
 
+  @SwitchSetting
+  private final ConfigProperty<Boolean> soundNotification = new ConfigProperty<>(true);
+
   @Override
   public ConfigProperty<Boolean> enabled() {
     return this.enabled;
@@ -28,5 +31,9 @@ public class WarnerConfiguration extends AddonConfig {
 
   public ConfigProperty<Boolean> nearNotification() {
     return nearNotification;
+  }
+
+  public ConfigProperty<Boolean> soundNotification() {
+    return soundNotification;
   }
 }
