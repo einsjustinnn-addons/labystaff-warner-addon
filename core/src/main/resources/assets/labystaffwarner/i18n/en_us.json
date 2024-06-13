@@ -1,0 +1,22 @@
+{
+  "labystaffwarner": {
+    "settings": {
+      "name": "LabyStaff Warner",
+      "enabled": {
+        "name": "Enabled"
+      },
+      "worldNotification": {
+        "name": "Staff Join Notification"
+      },
+      "nearNotification": {
+        "name": "Staff Near Notification"
+      }
+    },
+    "messages": {
+      "joinWorld": "%s is in your World.",
+      "leftWorld": "%s left the World.",
+      "joinNear": "%s is in your near.",
+      "leftNear": "%s is no longer in near."
+    }
+  }
+}

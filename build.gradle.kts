@@ -8,12 +8,12 @@ group = "org.example"
 version = System.getenv().getOrDefault("VERSION", "1.0.0")
 
 labyMod {
-    defaultPackageName = "org.example" //change this to your main package name (used by all modules)
+    defaultPackageName = "de.einsjustin" //change this to your main package name (used by all modules)
     addonInfo {
-        namespace = "example"
-        displayName = "ExampleAddon"
-        author = "Example Author"
-        description = "Example Description"
+        namespace = "labystaffwarner"
+        displayName = "LabyStaff Warner"
+        author = "EinsJustin"
+        description = "warns you about a LabyMod Staff"
         minecraftVersion = "*"
         version = getVersion().toString()
     }
