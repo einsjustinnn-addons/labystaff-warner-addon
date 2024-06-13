@@ -1,5 +1,4 @@
 # **LabyStaff Warner**
-![Downloads](https://labybadges-delta.vercel.app/api/downloads/toolwarn/formatted)<br>
 warns you about a LabyMod Staff
 
 ### Installation
